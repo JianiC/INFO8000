@@ -1,0 +1,39 @@
+APP: RSVdb
+
+Example:
+
+Hello word:
+curl http://34.70.26.62/
+{"hello":"This is a RSV database"}
+
+Get:
+retrieve data in json format fromt the database
+curl http://34.70.26.62/get
+[["AY911262","ATGGACTCTTACT"],["FJ614813","CTGGACGGTTTCC"],["FJ948820","GCTTTCGGGATAC"],["JF920046","ATGGACTCTTACT"],["JF920047","GCTTTCGGGATAC"]]
+
+Request
+input into the data via args and then redirect into get route
+curl http://34.70.26.62/post
+## still have issues
+
+
+############################################################################################
+##set up scripts
+sudo nano /etc/nginx/sites-enabled/reverseproxy 
+server {
+    listen 80;
+    location / {
+        proxy_pass http://127.0.0.1:8000;
+    }
+}
+
+##########################################################################################
+sudo nano /etc/supervisor/conf.d/RSVdb_launcher.conf 
+[program:RSVdb_launcher]
+user=root
+directory=/home/chenjiani930522/hw3
+command=/home/chenjiani930522/miniconda3/bin/gunicorn --workers 3 --bind 127.0.0.1:8000 RSVdb:app
+autostart=true
+autorestart=true
+stdout_logfile=/home/chenjiani930522/hw3/gunicorn.log
+stderr_logfile=/home/chenjiani930522/hw3/gunicorn.err.log

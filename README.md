@@ -5,7 +5,9 @@ Using length > 20000bp to filter the whole genome sequences
 
 ### Modeling
 Sequence alignment is used with Mafft in python
+
 Sequence data will be translated into numerical
+
 Sequence classification will be performed using K-Nearest Neighbors
 
 ### Data Storage

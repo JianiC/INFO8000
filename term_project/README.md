@@ -29,3 +29,5 @@ is add:
 add new seq to current dataframe, will update the prediction model
 is test:
 predict  the isolate country of the sequence
+Running on http://127.0.0.1:5000/
+<img width="295" alt="Screen Shot 2022-04-07 at 7 10 35 PM" src="https://user-images.githubusercontent.com/47227610/162334048-384041da-810b-4b8f-b62d-5ead342bfd7f.png">

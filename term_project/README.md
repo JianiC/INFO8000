@@ -30,4 +30,5 @@ add new seq to current dataframe, will update the prediction model
 is test:
 predict  the isolate country of the sequence
 Running on http://127.0.0.1:5000/
-<img width="295" alt="Screen Shot 2022-04-07 at 7 10 35 PM" src="https://user-images.githubusercontent.com/47227610/162334048-384041da-810b-4b8f-b62d-5ead342bfd7f.png">
+<img width="246" alt="image" src="https://user-images.githubusercontent.com/47227610/162334113-16ee39c5-6a48-4318-bc40-dc878246dac6.png">
+
